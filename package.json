@@ -1,0 +1,26 @@
+{
+  "name": "ryuvigen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ryuvi <vicenters10@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "chokidar-cli": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "ejs": "^3.1.8",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "live-server": "^1.2.2",
+    "marked": "^4.0.19",
+    "prettier": "^2.7.1",
+    "serve": "^14.0.1"
+  },
+  "scripts": {
+    "build": "node scripts/build",
+    "serve": "node server.js",
+    "build:prod": "cross-env NODE_ENV=production node ./scripts/build",
+    "dev": "chokidar 'src/**/*' -c 'yarn run build'"
+  }
+}

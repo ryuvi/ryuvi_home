@@ -1,0 +1,30 @@
+<ul class="posts" id="posts">
+  <script defer>
+    fetch("./data/posts.json")
+      .then((response) => response.json())
+      .then((data) => {
+        let posts_list = document.getElementById("posts");
+
+        for (let i in data) {
+          if (data[i].category === "conto") {
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            let img = document.createElement("img");
+            let h1 = document.createElement("h1");
+
+            a.setAttribute("href", data[i].url);
+            h1.innerText = data[i].title;
+            h1.setAttribute("class", "title");
+            img.setAttribute("src", data[i].thumbnail);
+            img.setAttribute("class", "thumbnail");
+
+            a.appendChild(img);
+            a.appendChild(h1);
+            li.appendChild(a);
+            li.setAttribute("class", "post");
+            posts_list.appendChild(li);
+          }
+        }
+      });
+  </script>
+</ul>

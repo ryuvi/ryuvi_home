@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+<title>Ryuvi Home</title>
+<meta
+  name="description"
+  content="Micro Static Site Generator in Node.js"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#bd93f9" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="/assets/css/header.css" />
+
+  </head>
+  <body>
+    <header class="page-header">
+  <a href="/" class="header-btn">RYUVI</a>
+  <div class="submenu">
+    <a href="/poemas" class="header-btn">POEMAS</a>
+    <a href="/contos" class="header-btn">CONTOS</a>
+    <a href="https://github.com/ryuvi" class="header-btn">GitHub</a>
+  </div>
+</header>
+
+<hr />
+
+
+    <section class="main-content"><ul class="posts" id="posts">
+  <script defer>
+    fetch("../data/posts.json")
+      .then((response) => response.json())
+      .then((data) => {
+        let posts_list = document.getElementById("posts");
+
+        for (let i in data) {
+          if (data[i].category == "poema") {
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            let img = document.createElement("img");
+            let h1 = document.createElement("h1");
+
+            a.setAttribute("href", data[i].url);
+            h1.innerText = data[i].title;
+            h1.setAttribute("class", "title");
+            img.setAttribute("src", data[i].thumbnail);
+            img.setAttribute("class", "thumbnail");
+
+            a.appendChild(img);
+            a.appendChild(h1);
+            li.appendChild(a);
+            li.setAttribute("class", "post");
+            posts_list.appendChild(li);
+          }
+        }
+      });
+  </script>
+</ul>
+</section>
+  </body>
+</html>

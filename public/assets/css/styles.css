@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --Background: #282a36;
+  --Current-Line: #44475a;
+  --Foreground: #f8f8f2;
+  --Comment: #6272a4;
+  --Cyan: #8be9fd;
+  --Green: #50fa7b;
+  --Orange: #ffb86c;
+  --Pink: #ff79c6;
+  --Purple: #bd93f9;
+  --Red: #ff5555;
+  --Yellow: #f1fa8c;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Background);
+}
+
+hr {
+  background-color: var(--Comment);
+  margin-top: 0;
+  margin: 1em;
+}
+
+.posts {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  list-style: none;
+  padding: 1em;
+}
+
+.post {
+  background-color: var(--Comment);
+  display: flex;
+  padding: 2em;
+  width: 100%;
+}
+
+.post a {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.post .title {
+  align-items: center;
+  display: flex;
+  color: var(--Pink);
+  font-size: 2.5em;
+  margin-left: 1em;
+}
+
+.post .thumbnail {
+  width: 10%;
+}

@@ -1,0 +1,21 @@
+@import url("./styles.css");
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5em;
+}
+
+.main-content h1 {
+  color: var(--Pink);
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.main-content p {
+  color: var(--Purple);
+  text-align: center;
+}

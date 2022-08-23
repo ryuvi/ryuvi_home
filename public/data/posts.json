@@ -1,0 +1,20 @@
+[
+  {
+    "title": "O Amor Irá Aparecer (?)",
+    "thumbnail": "../assets/images/heart.jpeg",
+    "url": "../poemas/o_amor_ira_aparecer.html",
+    "category": "poema"
+  },
+  {
+    "title": "Recipientes",
+    "thumbnail": "",
+    "url": "../poemas/recipientes.html",
+    "category": "poema"
+  },
+  {
+    "title": "Recíproco",
+    "thumbnail": "",
+    "url": "../poemas/reciproco.html",
+    "category": "poema"
+  }
+]
