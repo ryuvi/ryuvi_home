@@ -7,13 +7,13 @@
   },
   {
     "title": "Recipientes",
-    "thumbnail": "",
+    "thumbnail": "../assets/images/vessel.jpg",
     "url": "../poemas/recipientes.html",
     "category": "poema"
   },
   {
     "title": "Recíproco",
-    "thumbnail": "",
+    "thumbnail": "../assets/images/couple.jpg",
     "url": "../poemas/reciproco.html",
     "category": "poema"
   }
