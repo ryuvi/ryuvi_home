@@ -1,12 +1,22 @@
 <ul class="posts" id="posts">
   <script defer>
+    let color_list = [
+      "#8be9fd",
+      "#50fa7b",
+      "#ffb86c",
+      "#ff79c6",
+      "#ff5555",
+      "#f1fa8c",
+    ];
     fetch("../data/posts.json")
       .then((response) => response.json())
       .then((data) => {
         let posts_list = document.getElementById("posts");
 
         for (let i in data) {
-          if (data[i].category == "poema") {
+          if (data[i].category === "poema") {
+            let color =
+              color_list[Math.floor(Math.random() * color_list.length)];
             let li = document.createElement("li");
             let a = document.createElement("a");
             let img = document.createElement("img");
@@ -15,11 +25,25 @@
             a.setAttribute("href", data[i].url);
             h1.innerText = data[i].title;
             h1.setAttribute("class", "title");
-            img.setAttribute("src", data[i].thumbnail);
-            img.setAttribute("class", "thumbnail");
+            h1.setAttribute("style", `color: ${color};`);
 
-            a.appendChild(img);
             a.appendChild(h1);
+            if (data[i].copyright !== "") {
+              let div = document.createElement("div");
+              let small = document.createElement("small");
+              img.setAttribute("src", data[i].thumbnail);
+              img.setAttribute("class", "thumbnail");
+              small.innerHTML = data[i].copyright;
+              div.appendChild(img);
+              div.appendChild(small);
+              div.setAttribute("class", "unique");
+              a.appendChild(div);
+            } else {
+              img.setAttribute("src", data[i].thumbnail);
+              img.setAttribute("class", "thumbnail");
+              a.appendChild(img);
+            }
+
             li.appendChild(a);
             li.setAttribute("class", "post");
             posts_list.appendChild(li);

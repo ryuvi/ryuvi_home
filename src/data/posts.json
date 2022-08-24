@@ -3,18 +3,35 @@
     "title": "O Amor Irá Aparecer (?)",
     "thumbnail": "../assets/images/heart.jpeg",
     "url": "../poemas/o_amor_ira_aparecer.html",
-    "category": "poema"
+    "category": "poema",
+    "copyright": ""
   },
   {
     "title": "Recipientes",
     "thumbnail": "../assets/images/vessel.jpg",
     "url": "../poemas/recipientes.html",
-    "category": "poema"
+    "category": "poema",
+    "copyright": ""
   },
   {
     "title": "Recíproco",
     "thumbnail": "../assets/images/couple.jpg",
     "url": "../poemas/reciproco.html",
-    "category": "poema"
+    "category": "poema",
+    "copyright": ""
+  },
+  {
+    "title": "Perdido",
+    "thumbnail": "../assets/images/lost.jpg",
+    "url": "../poemas/perdido.html",
+    "category": "poema",
+    "copyright": "<a href='https://www.vecteezy.com/free-vector/lost'>Lost Vectors by Vecteezy</a>"
+  },
+  {
+    "title": "Um Figura Paterna",
+    "thumbnail": "../assets/images/father.jpg",
+    "url": "../poemas/uma_figura_paterna.html",
+    "category": "poema",
+    "copyright": "<a href='https://www.freepik.com'>Designed By FreePik</a>"
   }
 ]

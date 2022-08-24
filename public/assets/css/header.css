@@ -4,6 +4,7 @@
   background-color: var(--Background);
   display: flex;
   justify-content: space-between;
+  padding: 1em;
 }
 
 .page-header .submenu {
@@ -20,15 +21,35 @@
 
 .header-btn {
   background-color: var(--Current-Line);
+  border: 1px solid var(--Current-Line);
+  border-radius: 10px;
   color: var(--Purple);
   font-size: 1em;
   padding: 1em;
   text-decoration: none;
-  transition: background-color 0.5s, color 0.5s, text-decoration 0.5s;
+  transition: background-color 0.5s, color 0.5s, text-decoration 0.5s,
+    border 0.5s;
 }
 
 .header-btn:hover {
   background-color: var(--Comment);
+  border: 1px solid var(--Pink);
   color: var(--Pink);
   text-decoration: underline;
+}
+
+@media screen and (max-width: 755px) {
+  .header-btn {
+    padding: 0.5em;
+  }
+
+  .page-header {
+    justify-content: center;
+    padding: 1em 0;
+  }
+
+  .page-header .header-btn {
+    border-radius: 10px;
+    margin: 0 1em;
+  }
 }

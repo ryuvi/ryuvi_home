@@ -42,20 +42,30 @@ hr {
 }
 
 .post {
-  background-color: var(--Current-Line);
+  /* background-color: var(--Current-Line);
   display: flex;
+  padding: 2em; */
   margin: 1em 0;
-  padding: 2em;
   width: 100%;
 }
 
 .post a {
+  background-color: var(--Current-Line);
+  padding: 2em;
+
+  border: 2px solid var(--Current-Line);
   display: flex;
   justify-content: space-between;
   margin: auto;
   text-decoration: none;
   text-transform: uppercase;
+  transition: background-color 0.5s, border 0.5s;
   width: 100%;
+}
+
+.post a:hover {
+  background-color: var(--Comment);
+  border: 2px solid var(--Pink);
 }
 
 .post .title {
@@ -67,4 +77,63 @@ hr {
 
 .post .thumbnail {
   width: 10%;
+}
+
+.post .unique {
+  width: 10%;
+}
+
+.post .unique img {
+  width: 100%;
+}
+
+.post .unique small {
+  display: none;
+  font-size: 0.2em;
+}
+
+.page-footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.page-footer .self-credit,
+.page-footer .dracula-credit {
+  color: var(--Green);
+  margin: 0 1em;
+}
+
+.page-footer a {
+  color: var(--Yellow);
+  transition: color 0.5s;
+}
+
+.page-footer a:hover {
+  color: var(--Red);
+}
+
+@media screen and (max-width: 755px) {
+  .post .title {
+    font-size: 1em;
+  }
+
+  .post .thumbnail {
+    width: 25%;
+  }
+
+  .post .unique {
+    width: 25%;
+  }
+
+  .post .unique small {
+    font-size: 1px;
+  }
+
+  .page-footer .self-credit,
+  .page-footer .dracula-credit {
+    font-size: 0.7em;
+  }
 }

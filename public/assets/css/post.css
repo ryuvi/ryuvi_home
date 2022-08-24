@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .main-content h1 {
@@ -18,4 +19,19 @@
 .main-content p {
   color: var(--Purple);
   text-align: center;
+}
+
+@media screen and (max-width: 755px) {
+  .main-content {
+    padding-top: 0.5em;
+  }
+
+  .main-content h1 {
+    font-size: 1.5em;
+  }
+
+  .main-content p {
+    line-height: 1.5;
+    width: 75%;
+  }
 }

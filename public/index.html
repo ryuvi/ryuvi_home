@@ -19,7 +19,7 @@
   <div class="submenu">
     <a href="/poemas" class="header-btn">POEMAS</a>
     <a href="/contos" class="header-btn">CONTOS</a>
-    <a href="https://github.com/ryuvi" class="header-btn">GitHub</a>
+    <a href="https://github.com/ryuvi" class="header-btn">CONTATO</a>
   </div>
 </header>
 
@@ -52,11 +52,24 @@
           h1.innerText = data[i].title;
           h1.setAttribute("class", "title");
           h1.setAttribute("style", `color: ${color};`);
-          img.setAttribute("src", data[i].thumbnail);
-          img.setAttribute("class", "thumbnail");
 
           a.appendChild(h1);
-          a.appendChild(img);
+          if (data[i].copyright !== "") {
+            let div = document.createElement("div");
+            let small = document.createElement("small");
+            img.setAttribute("src", data[i].thumbnail);
+            img.setAttribute("class", "thumbnail");
+            small.innerHTML = data[i].copyright;
+            div.appendChild(img);
+            div.appendChild(small);
+            div.setAttribute("class", "unique");
+            a.appendChild(div);
+          } else {
+            img.setAttribute("src", data[i].thumbnail);
+            img.setAttribute("class", "thumbnail");
+            a.appendChild(img);
+          }
+
           li.appendChild(a);
           li.setAttribute("class", "post");
           posts_list.appendChild(li);
@@ -65,5 +78,19 @@
   </script>
 </ul>
 </section>
+
+    <hr />
+
+<footer class="page-footer">
+  <p class="self-credit">
+    Criado com ❤️ por
+    <a href="https://github.com/ryuvi" target="_blank">Vicente Nogueira</a>
+  </p>
+  <p class="dracula-credit">
+    Paleta de cores de
+    <a href="https://draculatheme.com" target="_blank">Dracula Theme</a>
+  </p>
+</footer>
+
   </body>
 </html>
