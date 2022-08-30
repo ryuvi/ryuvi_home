@@ -33,5 +33,33 @@
     "url": "../poemas/uma_figura_paterna.html",
     "category": "poema",
     "copyright": "<a href='https://www.freepik.com'>Designed By FreePik</a>"
+  },
+  {
+    "title": "Uma Maravilhosa Noite",
+    "thumbnail": "",
+    "url": "../poemas/uma_maravilhosa_noite.html",
+    "category": "poema",
+    "copyright": ""
   }
+  // {
+  //   "title": "O Passado",
+  //   "thumbnail": "../assets/images",
+  //   "url": "../contos/o_passado.html",
+  //   "category": "conto",
+  //   "copyright": ""
+  // },
+  // {
+  //   "title": "Uma Estrela Brilhante",
+  //   "thumbnail": "../assets/images",
+  //   "url": "../poemas/uma_estrela_brilhante.html",
+  //   "category": "poema",
+  //   "copyright": ""
+  // },
+  // {
+  //   "title": "Vasto Vazio",
+  //   "thumbnail": "../assets/images",
+  //   "url": "../poemas/vasto_vazio.html",
+  //   "category": "poema",
+  //   "copyright": ""
+  // }
 ]
