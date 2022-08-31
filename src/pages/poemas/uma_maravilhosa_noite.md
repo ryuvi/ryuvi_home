@@ -1,6 +1,6 @@
 ---
 title: Uma Maravilhosa Noite
-layout: poema
+layout: posts
 ---
 
 # Uma Maravilhosa Noite
